@@ -1,1 +1,2 @@
-This is a template generator based on the blockly interface. Clone the repo and host it locally. To use the tool, visit /demos/generator
+This is a template generation tool based on Google's Blockly.
+To use it, clone and host /demos/generator
