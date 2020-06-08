@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+
+            <title>Blockly style templates</title>
+            <script src="../../blockly_compressed.js"></script>
+            <script src="../../blocks_compressed.js"></script>
+            <script src="../../javascript_compressed.js"></script>
+            <script src="../../msg/js/en.js"></script>
+            <script src="location_blocks.js"></script>
+            <script src="location2.js"></script>
+            <script src="action_blocks.js"></script>
+            <script src="reference_blocks.js"></script>
+            <script src="stop_condition.js"></script>
+            <script src="replace.js"></script>
+            <script src="schematic.js"></script>
+            <script src="modify_dict.js"></script>
+            <script src="storage.js"></script>
+            <script src="variables.js"></script>
+            <script src="words.js"></script>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+            </head>
+           
+            <body>
+                <div id="blocklyDiv" style="height: 2000px; width: 2000px;" ></div>
+                <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none; " >
+                  
+                <category name="REFERENCE OBJECT" categorystyle="loc_category" >
+                    <block type="ref_object"></block>
+                </category>
+                <sep gap="8"></sep>
+                
+
+                <category name="ACTION" colour=#ff3341>
+                    <block type="action"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="LOCATION"  categorystyle="loc_category">
+                    <block type="location"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="LOCATION2"  colour=#ff3341 >
+                    <block type="location2"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="STOP CONDITION" categorystyle="loc_category">
+                    <block type="stop_condition"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="REPEAT" colour=#ff3341>
+                    <block type="repeat"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="SCHEMATIC" categorystyle="loc_category">
+                    <block type="schematic"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="TEXT" colour=#ff3341 >
+                    <block type="text"></block>
+                    <block type="text_length"></block>
+                    <block type="text_print"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="MODIFICATIONS" categorystyle="loc_category">
+                    <block type="thicken"></block>
+                    <block type="scale"></block>
+                    <block type="rigidmotion"></block>
+                    <block type="replace_geometry"></block>
+                    <block type="replace"></block>
+                    <block type="fill"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="BLOCK"colour=#ff3341>
+                    <block type="block"></block>
+                </category>
+                <sep gap="8"></sep>
+
+               
+              
+
+                    
+                
+                <category name="SAVED BLOCKS" categorystyle="loc_category" custom="COLOUR_PALETTE"></category>
+
+                <sep gap="8"></sep>
+                <category name="LOGIC" colour=#ff3341>
+                    <category name="If">
+                      <block type="controls_if"></block>
+                      <block type="controls_if">
+                        <mutation else="1"></mutation>
+                      </block>
+                      <block type="controls_if">
+                        <mutation elseif="1" else="1"></mutation>
+                      </block>
+                    </category>
+                    <category name="Boolean" colour="%{BKY_LOGIC_HUE}">
+                      <block type="logic_compare"></block>
+                      <block type="logic_operation"></block>
+                      <block type="logic_negate"></block>
+                      <block type="logic_boolean"></block>
+                      <block type="logic_null"></block>
+                      <block type="logic_ternary"></block>
+                    </category>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="LOOPS" categorystyle="loc_category">
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <field name="NUM">10</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="controls_whileUntil"></block>
+                    <block type="controls_for">
+                      <field name="VAR">i</field>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">10</field>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="controls_forEach"></block>
+                    <block type="controls_flow_statements"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="MATH" colour=#ff3341>
+                    <block type="math_number">
+                      <field name="NUM">123</field>
+                    </block>
+                    <block type="math_arithmetic"></block>
+                    <block type="math_single"></block>
+                    <block type="math_trig"></block>
+                    <block type="math_constant"></block>
+                    <block type="math_number_property"></block>
+                    <block type="math_round"></block>
+                    <block type="math_on_list"></block>
+                    <block type="math_modulo"></block>
+                    <block type="math_constrain">
+                      <value name="LOW">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="HIGH">
+                        <block type="math_number">
+                          <field name="NUM">100</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">100</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="math_random_float"></block>
+                    <block type="math_atan2"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="LISTS" categorystyle="loc_category">
+                    <block type="lists_create_empty"></block>
+                    <block type="lists_create_with"></block>
+                    <block type="lists_repeat">
+                      <value name="NUM">
+                        <block type="math_number">
+                          <field name="NUM">5</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="lists_length"></block>
+                    <block type="lists_isEmpty"></block>
+                    <block type="lists_indexOf"></block>
+                    <block type="lists_getIndex"></block>
+                    <block type="lists_setIndex"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="VARIABLES" custom="VARIABLE" colour=#ff3341>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="FUNCTIONS" custom="PROCEDURE" categorystyle="loc_category">
+                  </category>
+
+                  <sep gap="8"></sep>
+                  <category name="WORDS" categorystyle="loc_category">
+                    <block type="words"></block>
+
+                  </category>
+                  <sep></sep>
+                 
+                </category>
+    
+    
+                </xml>
+                <h1 > TEMPLATE GENERATOR </h1>
+            
+
+                
+               
+               
+     
+                <textarea placeholder="Add surface forms..." id = "mytextarea"
+                rows = "3"
+                cols = "40"></textarea>
+                <input type="button" id="btn" onclick="OnButtonClick()" value="Submit" />
+                <input type="button" id="btn1" onclick="OnButtonClick1()" value="Add another" />
+                <textarea placeholder="Action dictionary-text pairs" id="dict" rows = "10" cols = "40"></textarea>  
+                <input type="button" id="btn2" onclick="Click1()" value="Change and update" />
+                <input type="button" id="btn3" onclick="clearIt()" value="Clear" />
+           
+                <input type="button" onclick="surroundSelection()" value="Surround">
+<div contenteditable="true" id="p12">One two three four</div>
+<input type="text" id="test" value="Some text">
+<input type="button" onclick="put()" value="out">
+
+
+
+                <script>
+                    function surroundSelection() {
+    var span = document.createElement("span");
+    span.style.fontWeight = "bold";
+    span.style.color = "green";
+    
+    if (window.getSelection) {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var range = sel.getRangeAt(0).cloneRange();
+            range.surroundContents(span);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+    }
+}
+function put(){
+    document.getElementById("p1").innerHTML =  document.getElementById("mytextarea").value;
+
+
+}
+                    var demoWorkspace = Blockly.inject('blocklyDiv',
+    {
+        toolbox: document.getElementById('toolbox'),
+        zoom:
+         {controls: true,
+          wheel: true,
+          startScale: 1.3,
+          maxScale: 3,
+          minScale: 0.3,
+          scaleSpeed: 1.2},
+         trashcan: true, 
+   theme: 
+   {
+      'blockStyles' : {
+         "list_blocks": {
+            "colourPrimary": "#4a148c",
+            "colourSecondary":"#AD7BE9",
+            "colourTertiary":"#CDB6E9"
+         }
+      },
+      'categoryStyles' : {
+         "loc_category": {
+            "colour": "#A74AC7"
+         },
+        
+      },
+      'componentStyles' : {
+       //'workspaceBackgroundColour':linear-gradient(to bottom, #33ccff 45%, #ff99cc 78%)
+       'toolboxBackgroundColour': '#7ec8ed'
+
+         
+      },
+      'fontStyle':{
+
+        
+    "family": "Georgia, serif",
+    "weight": "bold",
+    "size": 12
+}
+
+      }
+   }
+);
+/**
+ * Construct the blocks requthcdgtnndejkrejnkhnkrefkihflegkhnkgngjelrkukuuietubjlkihultjnddkired by the flyout for the colours category.
+ * @param {!Blockly.Workspace} workspace The workspace this flyout is for.
+ * @return {!Array.<!Element>} Array of XML block elements.
+ */
+ Blockly.WorkspaceSvg.prototype.coloursFlyoutCallback = function(workspace) {
+  // Returns an array of hex colours, e.g. ['#4286f4', '#ef0447']
+  var colourList =["red", "pink"] 
+  //Blockly.WorkspaceSvg.getPalette();
+  var xmlList = [];
+  //if (Blockly.Blocks['colour_picker']) {
+    for (var i = 1; i <=localStorage.getItem("max"); i++) {
+     /* var blockText = '<block type="colour_picker">' +
+          '<field name="COLOUR">' + colourList[i] + '</field>' +
+          '</block>';*/
+
+
+          var blockText=Blockly.Xml.textToDom(localStorage.getItem(i));
+     // var block = Blockly.Xml.textToDom(blockText);
+      xmlList.push(blockText);
+    }
+  //}
+  return xmlList;
+};
+
+
+
+demoWorkspace.registerToolboxCategoryCallback(
+  'COLOUR_PALETTE', Blockly.WorkspaceSvg.prototype.coloursFlyoutCallback);
+
+function OnButtonClick() {
+            var cur=document.getElementById("dict").innerHTML;
+            var textcontrol = document.getElementById("dict");            
+            textcontrol.innerHTML = cur+document.getElementById("mytextarea").value+'   '+
+            Blockly.JavaScript.workspaceToCode(demoWorkspace)+'\n\n';
+            textcontrol.value=textcontrol.innerHTML;
+           
+        }
+        function OnButtonClick1(){
+            document.getElementById("mytextarea").value='';
+        }
+
+function clearIt(){
+    document.getElementById("dict").innerHTML='';
+    document.getElementById("dict").value='';
+
+
+}
+
+function Click1(){
+    var str=document.getElementById("dict").innerHTML;
+   
+    var g=str.split('   ');
+    var surf=g[0];  
+    var q=g[1];
+    var toAdd='';
+    var r=JSON.parse(q);
+    console.log(r);
+    
+
+    var indv=surf.split('\n');
+    var i;    
+    var cur;
+    for(i=0;i<indv.length;i++){
+        cur=indv[i];
+        var words=cur.split(' ');
+        var t=0;
+        while(t<words.length-1){
+            if(words[t+1]=='*'){
+            break;
+        }
+            t++;
+
+        }
+        console.log(r["Type"])
+        //window.alert(r["Type"]);
+        if(r["Type"]=="location"){
+            words[t]=r["steps"];
+
+
+        }
+        if(r["Type"]=="ref"){
+            words[t]=r["filters"]["has_size"];
+        }
+       
+    var j=words.join(' ');
+ 
+    toAdd=toAdd+j+'\n';
+
+        }
+     document.getElementById('mytextarea').innerHTML=toAdd;
+     document.getElementById('mytextarea').value=toAdd;
+
+    }
+
+
+function click1(){
+    var str=document.getElementById("dict").innerHTML;
+    //cur_text=document.getElementById("dict").value;
+    13
+
+    /*
+
+   var arr = [];
+   arr=str.split('\n')
+window.alert("hjo");
+   window.alert(arr);
+   
+   
+   //new storage
+   str = str.split('   ');     //split by spaces
+   /*arr.push(str.shift());    //add the number
+   arr.push(str.join(' '));  //and the rest of the string*/
+   window.alert("esn");
+    window.alert(str);    
+    
+    //str=arr[0];
+    var p=str;
+    str=str[0];
+   str = str.split(' ');     //split by spaces
+
+
+   /*arr.push(str.shift());    //add the number
+   arr.push(str.join(' '));  //and the rest of the string*/
+    window.alert(str);    
+    window.alert("hello");
+    window.alert(str[0])
+    
+    
+    var i=0;
+    while(i<str.length-1){
+        window.alert(str[i]);
+        if(str[i+1]=='*'){
+            window.alert(i);
+            break;
+
+        }
+        i++;
+    }
+    
+    
+    var q=p[1];
+    window.alert(q);
+    
+
+    var r=JSON.parse(q);
+    console.log(r);
+   // var steps=r["steps"];
+    //window.alert(r["steps"]);
+    str[i]=r["steps"];
+    window.alert(str);
+    var t=str.join(' ')
+    window.alert(t);
+    /*
+    var r=q.split(',');
+    window.alert(r);
+    window.alert(q["steps"]);*/
+    
+
+
+}
+function doIt(){
+    var line= document.getElementById("mytextarea").value;
+    window.alert(line);
+    
+
+}
+        function GetSelectedText () {
+            window.alert("hi");
+            var selText = "";
+            if (window.getSelection) {  // all browsers, except IE before version 9
+                if (document.activeElement && 
+                        (document.activeElement.tagName.toLowerCase () == "textarea" || 
+                         document.activeElement.tagName.toLowerCase () == "input")) 
+                {
+                    var text = document.activeElement.value;
+                    selText = text.substring (document.activeElement.selectionStart, 
+                                              document.activeElement.selectionEnd);
+                }
+                else {
+                    var selRange = window.getSelection ();
+                    selText = selRange.toString ();
+                }
+            }
+            else {
+                if (document.selection.createRange) { // Internet Explorer
+                    var range = document.selection.createRange ();
+                    selText = range.text;
+                }
+            }
+            if (selText !== "") {
+                alert (selText);
+            }
+        }
+    
+   
+        </script>
+    </body>
+
+</html>

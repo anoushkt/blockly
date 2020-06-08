@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+            <title>Blockly style templates</title>
+            <script src="../../blockly_compressed.js"></script>
+            <script src="../../blocks_compressed.js"></script>
+            <script src="../../javascript_compressed.js"></script>
+            <script src="../../msg/js/en.js"></script>
+            <script src="location_blocks.js"></script>
+            <script src="action_blocks.js"></script>
+            <script src="reference_blocks.js"></script>
+            <script src="stop_condition.js"></script>
+            <script src="replace.js"></script>
+            <script src="schematic.js"></script>
+            <script src="modify_dict.js"></script>
+            <script src="storage.js"></script>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+            </head>
+            <body>
+
+            <h1 > TEMPLATE GENERATOR </h1>
+
+            <div id="blocklyDiv" style="height: 800px; width: 1200px;" ></div>
+            <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none position:"relative" left:"400px" top:"1200px"" >
+            
+                
+            </category>
+            <category name="REFERENCE OBJECT" colour="%{BKY_LOGIC_HUE}">
+                <block type="ref_object"></block>
+            </category>
+            <category name="ACTION" colour="%{BKY_LOGIC_HUE}">
+                <block type="action"></block>
+            </category>
+            <category name="LOCATION" colour="%{BKY_LOGIC_HUE}">
+                <block type="location"></block>
+            </category>
+            <category name="STOP CONDITION" colour="%{BKY_LOGIC_HUE}">
+                <block type="stop_condition"></block>
+            </category>
+            <category name="REPEAT" colour="%{BKY_LOGIC_HUE}">
+                <block type="repeat"></block>
+            </category>
+            <category name="SCHEMATIC" colour="%{BKY_LOGIC_HUE}">
+                <block type="schematic"></block>
+            </category>
+            <category name="TEXT" colour="%{BKY_LOGIC_HUE}">
+                <block type="text"></block>
+                <block type="text_length"></block>
+                <block type="text_print"></block>
+            </category>
+            <category name="MODIFICATIONS" colour="%{BKY_LOGIC_HUE}">
+                <block type="thicken"></block>
+                <block type="scale"></block>
+                <block type="rigidmotion"></block>
+                <block type="replace_geometry"></block>
+                <block type="replace"></block>
+                <block type="fill"></block>
+            </category>
+            <category name="BLOCK" colour="%{BKY_LOGIC_HUE}">
+                <block type="block"></block>
+            </category>
+            </xml>
+            <p1 > SURFACE FORMS </p1>
+        
+            
+            <textarea id = "mytextarea"
+                rows = "3"
+                cols = "40"></textarea>
+
+                <input type="button" id="btn" onclick="OnButtonClick()" value="Submit" />
+                <input type="button" id="btn1" onclick="OnButtonClick1()" value="Add another" />
+
+            <p2>ACTION DICTIONARY-TEXT PAIRS</p2>   
+            <textarea id="dict" rows = "10" cols = "40"></textarea>  
+            
+        <input type="button" id="restorer" onclick="restoreIt()" value="Restore" />
+        
+        <button onclick="showCode()" id="show">Show template</button>   
+
+            <script>
+            var demoWorkspace = Blockly.inject(document.getElementById('blocklyDiv'), {media: '../../media/',
+            toolbox: document.getElementById('toolbox')});
+            
+        function OnButtonClick() {
+            var cur=document.getElementById("dict").innerHTML;
+            var textcontrol = document.getElementById("dict");
+            textcontrol.innerHTML = cur+'\n\n'+document.getElementById("mytextarea").value+'    '+
+            Blockly.JavaScript.workspaceToCode(demoWorkspace);
+        }
+        function OnButtonClick1(){
+            document.getElementById("mytextarea").value='';
+        }
+        function restoreIt(){
+            //var xml = Blockly.Xml.textToDom(document.getElementById("info").value);
+            
+            //from here
+            var i=1;
+            var max= parseInt(localStorage.getItem('max'));
+            while(i<=max){
+            
+            
+                var xml=Blockly.Xml.textToDom(localStorage.getItem(i));
+                //Blockly.demoWorkspace.pasteBlock_(xml);
+                //Blockly.WorkspaceSvg.prototype.paste(xml);
+            
+               
+               
+                //Blockly.duplicate(xml);
+               Blockly.Xml.domToBlock(xml, demoWorkspace);
+                //var d=getLocation();
+                //Blockly.navigation.insertBlock(xml,d);
+            i++;
+
+            }
+        }
+        function showCode() {
+                               // Generate JavaScript code and display it.
+                               Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+                               var code = Blockly.JavaScript.workspaceToCode(demoWorkspace);
+                               alert(code);
+                           }
+
+
+
+
+            </script>
+
+
+            </body>
+
+</html>
+            
+        

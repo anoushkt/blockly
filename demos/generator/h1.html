@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+
+            <title>Blockly style templates</title>
+            <script src="../../blockly_compressed.js"></script>
+            <script src="../../blocks_compressed.js"></script>
+            <script src="../../javascript_compressed.js"></script>
+            <script src="../../msg/js/en.js"></script>
+            <script src="location_blocks.js"></script>
+            <script src="location2.js"></script>
+            <script src="action_blocks.js"></script>
+            <script src="reference_blocks.js"></script>
+            <script src="stop_condition.js"></script>
+            <script src="replace.js"></script>
+            <script src="schematic.js"></script>
+            <script src="modify_dict.js"></script>
+            <script src="storage.js"></script>
+            <script src="variables.js"></script>
+            <script src="words.js"></script>
+            <script src="aample.js"></script>
+            
+            <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+            </head>
+           
+            <body>
+                <div id="blocklyDiv" style="height: 2000px; width: 2000px;" ></div>
+                <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none; " >
+                  
+                <category name="REFERENCE OBJECT" categorystyle="loc_category" >
+                    <block type="ref_object"></block>
+                </category>
+                <sep gap="8"></sep>
+                
+
+                <category name="ACTION" colour=#ff3341>
+                    <block type="action"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="LOCATION"  categorystyle="loc_category">
+                    <block type="location"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="STOP CONDITION" categorystyle="loc_category">
+                    <block type="stop_condition"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="REPEAT" colour=#ff3341>
+                    <block type="repeat"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="SCHEMATIC" categorystyle="loc_category">
+                    <block type="schematic"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="TEXT" colour=#ff3341 >
+                    <block type="text"></block>
+                    <block type="text_length"></block>
+                    <block type="text_print"></block>
+                    <block type="directions"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="MODIFICATIONS" categorystyle="loc_category">
+                    <block type="thicken"></block>
+                    <block type="scale"></block>
+                    <block type="rigidmotion"></block>
+                    <block type="replace_geometry"></block>
+                    <block type="replace"></block>
+                    <block type="fill"></block>
+                </category>
+                <sep gap="8"></sep>
+                <category name="BLOCK"colour=#ff3341>
+                    <block type="block"></block>
+                </category>
+                <sep gap="8"></sep>
+
+               
+              
+
+                    
+                
+                <category name="SAVED BLOCKS" categorystyle="loc_category" custom="COLOUR_PALETTE"></category>
+
+                <sep gap="8"></sep>
+                <category name="LOGIC" colour=#ff3341>
+                    <category name="If">
+                      <block type="controls_if"></block>
+                      <block type="controls_if">
+                        <mutation else="1"></mutation>
+                      </block>
+                      <block type="controls_if">
+                        <mutation elseif="1" else="1"></mutation>
+                      </block>
+                    </category>
+                    <category name="Boolean" colour="%{BKY_LOGIC_HUE}">
+                      <block type="logic_compare"></block>
+                      <block type="logic_operation"></block>
+                      <block type="logic_negate"></block>
+                      <block type="logic_boolean"></block>
+                      <block type="logic_null"></block>
+                      <block type="logic_ternary"></block>
+                    </category>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="LOOPS" categorystyle="loc_category">
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <field name="NUM">10</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="controls_whileUntil"></block>
+                    <block type="controls_for">
+                      <field name="VAR">i</field>
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">10</field>
+                        </block>
+                      </value>
+                      <value name="BY">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="controls_forEach"></block>
+                    <block type="controls_flow_statements"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="MATH" colour=#ff3341>
+                    <block type="math_number">
+                      <field name="NUM">123</field>
+                    </block>
+                    <block type="math_arithmetic"></block>
+                    <block type="math_single"></block>
+                    <block type="math_trig"></block>
+                    <block type="math_constant"></block>
+                    <block type="math_number_property"></block>
+                    <block type="math_round"></block>
+                    <block type="math_on_list"></block>
+                    <block type="math_modulo"></block>
+                    <block type="math_constrain">
+                      <value name="LOW">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="HIGH">
+                        <block type="math_number">
+                          <field name="NUM">100</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <field name="NUM">100</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="math_random_float"></block>
+                    <block type="math_atan2"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="LISTS" categorystyle="loc_category">
+                    <block type="lists_create_empty"></block>
+                    <block type="lists_create_with"></block>
+                    <block type="lists_repeat">
+                      <value name="NUM">
+                        <block type="math_number">
+                          <field name="NUM">5</field>
+                        </block>
+                      </value>
+                    </block>
+                    <block type="lists_length"></block>
+                    <block type="lists_isEmpty"></block>
+                    <block type="lists_indexOf"></block>
+                    <block type="lists_getIndex"></block>
+                    <block type="lists_setIndex"></block>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="VARIABLES" custom="VARIABLE" colour=#ff3341>
+                  </category>
+                  <sep gap="8"></sep>
+                  <category name="FUNCTIONS" custom="PROCEDURE" categorystyle="loc_category">
+                  </category>
+
+                  <sep gap="8"></sep>
+                  <category name="WORDS" categorystyle="loc_category">
+                    <block type="words"></block>
+
+                  </category>
+                  <sep></sep>
+                 
+                </category>
+    
+    
+                </xml>
+                <h1 > TEMPLATE GENERATOR </h1>
+     
+                <div contenteditable="true" id="mytextarea"></div>
+                
+
+
+
+                <input type="button" id="btn" onclick="OnButtonClick()" value="Submit" />
+                <input type="button" id="btn1" onclick="OnButtonClick1()" value="Add another" />
+              
+                <pre  contenteditable="true" id="dict"  ></pre>
+                <input type="button" id="btn2" onclick="click1()" value="Change and update" />
+                <input type="button" id="btn3" onclick="clearIt()" value="Clear" />
+           
+                <input type="button" onclick="surroundSelection()" id="bt" value="Highlight">
+        
+<input name="Color Picker" id="colors" type="color" list="profilecolorslist"/>
+<input type="button" onclick="saveToLs()" id="bt1" value="saveToLs">
+
+<input type="button" id="save" onclick="localStorageToFile()" value="saveToeLs">
+
+<input type="button"  onclick="f()" value="sav">
+
+
+
+<datalist id="profilecolorslist">
+  
+    <option value="#ffffff">
+    <option value="#cccccc">
+    <option value="#c0c0c0">
+    <option value="#999999"></option>
+  
+    <option value="#666666">
+  
+    <option value="#333333">
+  
+    <option value="#000000">
+    <option value="#ffcccc">
+    <option value="#ff6666">
+    <option value="#ff0000">
+    <option value="#cc0000"></option>
+    <option value="#990000"></option>
+    <option value="#ff6666"></option>
+
+  
+  </datalist>
+
+                <script>
+                    function surroundSelection() {
+    var span = document.createElement("span");
+    span.style.fontWeight = "bold";
+   // span.style.color = "green";
+   span.style.backgroundColor = document.getElementById("colors").value;
+  
+
+ var a = span.style.backgroundColor.split("(")[1].split(")")[0];
+a = a.split(",");
+var b = a.map(function(x){                      //For each array element
+    x = parseInt(x).toString(16);      //Convert to a base16 string
+    return (x.length==1) ? "0"+x : x; //Add zero if we get only one character
+});
+b = '#'+b.join("");
+    
+
+    if (window.getSelection) {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var range = sel.getRangeAt(0).cloneRange();
+            range.surroundContents(span);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+        var text=document.getElementById("mytextarea").innerText;
+        
+        var dict= JSON.parse(Blockly.JavaScript.workspaceToCode(demoWorkspace));
+   
+        //localStorage.setItem(sel,cat)
+       var colors=dict["colors"];
+        var key;
+        for (key in colors){
+
+            if(colors[key]==b)  {
+                localStorage.setItem(sel,key);
+                saveToLs(sel,key);
+
+
+            }
+        }
+        var y;
+        var ty=dict["Type"];
+        for(y in JSON.parse(Blockly.JavaScript.workspaceToCode(demoWorkspace))){
+           if(ty=="location" ){
+               if(y=="reference_object"){
+               var ref=JSON.parse(dict[y].slice(1,-1));
+               var col=ref["colors"];
+               var key;
+              for (key in col){
+
+            if(col[key]==b)  {
+                saveToLs(sel,key);
+
+
+            }
+        }
+
+              console.log(JSON.parse(dict[y].slice(1,-1)));   
+            }
+           }
+        }
+       
+    }
+}
+function put(){
+    document.getElementById("p1").innerHTML =  document.getElementById("mytextarea").value;
+
+
+}
+                    var demoWorkspace = Blockly.inject('blocklyDiv',
+    {
+        toolbox: document.getElementById('toolbox'),
+        zoom:
+         {controls: true,
+          wheel: true,
+          startScale: 1.3,
+          maxScale: 3,
+          minScale: 0.3,
+          scaleSpeed: 1.2},
+         trashcan: true, 
+   theme: 
+   {
+      'blockStyles' : {
+         "list_blocks": {
+            "colourPrimary": "#4a148c",
+            "colourSecondary":"#AD7BE9",
+            "colourTertiary":"#CDB6E9"
+         }
+      },
+      'categoryStyles' : {
+         "loc_category": {
+            "colour": "#A74AC7"
+         },
+        
+      },
+      'componentStyles' : {
+       //'workspaceBackgroundColour':linear-gradient(to bottom, #33ccff 45%, #ff99cc 78%)
+       'toolboxBackgroundColour': '#7ec8ed'
+
+         
+      },
+      'fontStyle':{
+
+        
+    "family": "Georgia, serif",
+    "weight": "bold",
+    "size": 12
+}
+
+      }
+   }
+);
+/**
+ * Construct the blocks requthcdgtnndejkrejnkhnkrefkihflegkhnkgngjelrkukuuietubjlkihultjnddkired by the flyout for the colours category.
+ * @param {!Blockly.Workspace} workspace The workspace this flyout is for.
+ * @return {!Array.<!Element>} Array of XML block elements.
+ */
+ Blockly.WorkspaceSvg.prototype.coloursFlyoutCallback = function(workspace) {
+  // Returns an array of hex colours, e.g. ['#4286f4', '#ef0447']
+  var colourList =["red", "pink"] 
+  //Blockly.WorkspaceSvg.getPalette();
+  var xmlList = [];
+  //if (Blockly.Blocks['colour_picker']) {
+    for (var i = 1; i <=localStorage.getItem("max"); i++) {
+     /* var blockText = '<block type="colour_picker">' +
+          '<field name="COLOUR">' + colourList[i] + '</field>' +
+          '</block>';*/
+
+
+          var blockText=Blockly.Xml.textToDom(localStorage.getItem(i));
+     // var block = Blockly.Xml.textToDom(blockText);
+      xmlList.push(blockText);
+    }
+  //}
+  return xmlList;
+};
+
+
+
+demoWorkspace.registerToolboxCategoryCallback(
+  'COLOUR_PALETTE', Blockly.WorkspaceSvg.prototype.coloursFlyoutCallback);
+
+
+function contains_prop(prop, type){
+    if(type=="location"){
+        return ((prop=="steps")|| (prop==relative_direction) ||
+        (prop==reference_object));
+
+
+    }
+    if(type=="ref"){
+        return ((prop=="has_size") || (prop=="has_colour")|| (prop==has_name));
+
+
+    }
+
+
+
+}
+
+function OnButtonClick() {
+            var cur=document.getElementById("dict").innerHTML;
+            var textcontrol = document.getElementById("dict");            
+            var x= Blockly.JavaScript.workspaceToCode(demoWorkspace);
+            textcontrol.innerHTML = cur+document.getElementById("mytextarea").innerHTML+'   '+
+           x+'\n\n';
+            //textcontrol.value=textcontrol.innerHTML;
+           
+        }
+        function OnButtonClick1(){
+            document.getElementById("mytextarea").value='';
+        }
+
+function saveToLs(key, val){
+    var x=document.getElementById("mytextarea").innerText;
+    window.alert(x);
+   var dic=JSON.parse(localStorage.getItem("data_sent"));
+   console.log(dic);
+   //dic[x]=1;
+   if(dic){
+       var cur=dic[x];
+       if(cur){
+           cur[key]=val;
+       }
+       else {
+           cur={};
+           cur[key]=val;
+
+       }
+       dic[x]=cur;
+   
+       /*var o={};
+       o[x]=sen;
+       dic=Object.assign({},o,dic);*/
+    }
+
+   else {
+
+    dic={};
+    dic[x]={};
+    dic[x][key]=val;
+   // dic[x].key=val;
+    
+   }
+   /*var a={};
+   a[x]="apple";
+   var food=Object.assign({},a,dic);*/
+   
+   //console.log(dic);
+   localStorage.setItem("data_sent",JSON.stringify(dic));
+
+
+
+}
+function clearIt(){
+
+  
+
+    document.getElementById("dict").innerHTML='';
+    document.getElementById("dict").value='';
+
+
+}
+
+function Click1(){
+    var str=document.getElementById("dict").innerHTML;
+   
+    var g=str.split('   ');
+    var surf=g[0];  
+    var q=g[1];
+    var toAdd='';
+    var r=JSON.parse(q);
+    console.log(r);
+    
+
+    var indv=surf.split('\n');
+    var i;    
+    var cur;
+    for(i=0;i<indv.length;i++){
+        cur=indv[i];
+        var words=cur.split(' ');
+        var t=0;
+        while(t<words.length-1){
+            if(words[t+1]=='*'){
+            break;
+        }
+            t++;
+
+        }
+        console.log(r["Type"])
+        //window.alert(r["Type"]);
+        if(r["Type"]=="location"){
+            words[t]=r["steps"];
+
+
+        }
+        if(r["Type"]=="ref"){
+            words[t]=r["filters"]["has_size"];
+        }
+       
+    var j=words.join(' ');
+ 
+    toAdd=toAdd+j+'\n';
+
+        }
+     document.getElementById('mytextarea').innerHTML=toAdd;
+     document.getElementById('mytextarea').value=toAdd;
+
+}
+
+
+// file download button event listener
+
+
+function click1(){
+    var str=document.getElementById("dict").innerHTML;
+    var q=str.split("   ");
+    var action_dict=JSON.parse(q[1]);
+    console.log(action_dict);
+    window.alert(q);
+    var cur_text=document.getElementById("mytextarea").innerText;
+    var all_sent_text=JSON.parse(localStorage.getItem("data_sent"));
+    var cur_sent_text=all_sent_text[cur_text];
+
+    var words=cur_text.split(' ');
+    window.alert(words);
+
+    var i=0;
+    var a={};
+    
+    while(i<words.length){
+        var word=words[i];
+        window.alert(word);
+        var dict_cor=cur_sent_text[word];
+        window.alert(dict_cor);
+        var new_value;
+       if(dict_cor){
+        if((action_dict["Type"]=="location"))
+        {
+            if(dict_cor=="steps" || dict_cor=="relative_direction"){
+                window.alert("wtf");
+                new_value=action_dict[dict_cor];
+            }
+            else{
+                window.alert("ok");
+                var dict2=JSON.parse((action_dict["reference_object"]).slice(1,-1));
+                var dict3= dict2["filters"];
+               
+                new_value=dict3[dict_cor];
+        }
+    }
+
+       else if(action_dict["Type"]=="ref"){
+           new_value=action_dict["filters"][dict_cor];
+        }
+        words[i]=new_value;
+       a[new_value]=dict_cor;       
+    }
+        i++;
+
+
+    }
+    window.alert(words);
+    var j=(words.join(' '));
+    document.getElementById('mytextarea').innerText=j;
+    var b={};
+    b[j]=a;
+    console.log(b);
+    
+    var fin= Object.assign({},b,all_sent_text);
+    console.log(fin);    
+    window.localStorage.setItem("data_sent",JSON.stringify(fin));
+
+
+
+
+}
+function doIt(){
+    var line= document.getElementById("mytextarea").value;
+    window.alert(line);
+    
+
+}
+        function GetSelectedText () 
+        {
+            window.alert("hi");
+            var selText = "";
+            if (window.getSelection) {  // all browsers, except IE before version 9
+                if (document.activeElement && 
+                        (document.activeElement.tagName.toLowerCase () == "textarea" || 
+                         document.activeElement.tagName.toLowerCase () == "input")) 
+                {
+                    var text = document.activeElement.value;
+                    selText = text.substring (document.activeElement.selectionStart, 
+                                              document.activeElement.selectionEnd);
+                }
+                else {
+                    var selRange = window.getSelection ();
+                    selText = selRange.toString ();
+                }
+            }
+            else {
+                if (document.selection.createRange) { // Internet Explorer
+                    var range = document.selection.createRange ();
+                    selText = range.text;
+                }
+            }
+            if (selText !== "") {
+                alert (selText);
+
+            }
+        }
+    
+        function rgb2hex(red, green, blue) {
+        var rgb = blue | (green << 8) | (red << 16);
+        return '#' + (0x1000000 + rgb).toString(16).slice(1)
+  }
+
+  function hex2rgb(hex) {
+        // long version
+        r = hex.match(/^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
+        if (r) {
+                return r.slice(1,4).map(function(x) { return parseInt(x, 16); });
+        }
+        // short version
+        r = hex.match(/^#([0-9a-f])([0-9a-f])([0-9a-f])$/i);
+        if (r) {
+                return r.slice(1,4).map(function(x) { return 0x11 * parseInt(x, 16); });
+        }
+        return null;
+  }
+        
+  </script>
+</body>
+<script src="saver.js"> </script>
+
+</html>

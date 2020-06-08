@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+function copyText() {
+  $('#text').val($('#divtext').html()
+  .split('<br>').join('')
+  .split('<div>').join('\n')
+  .split('</div>').join('')
+  .split('&lt;').join('<')
+  .split('&gt;').join('>')
+  .split('&nbsp;').join(' ')
+  .split('&amp;').join('&')
+  )
+}
+</script>
+
+<div id="divtext" contentEditable="true" wrap="soft" style="text-align:left; width: 499px; height: 230px;" onkeyup="copyText();"></div>
+<br>
+<textarea id="text" rows="34" cols="134" wrap="soft"></textarea>

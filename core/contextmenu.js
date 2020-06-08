@@ -248,7 +248,7 @@ Blockly.ContextMenu.blockHelpOption = function(block) {
 Blockly.ContextMenu.blockDuplicateOption = function(block) {
   var enabled = block.isDuplicatable();
   var duplicateOption = {
-    text: Blockly.Msg['DUPLICATE_BLOCK'],
+    text: Blockly.Msg['DUPLICATE__BLOCK'],
     enabled: enabled,
     callback: function() {
       Blockly.duplicate(block);
@@ -256,7 +256,6 @@ Blockly.ContextMenu.blockDuplicateOption = function(block) {
   };
   return duplicateOption;
 };
-
 /**
  * Make a context menu option for adding or removing comments on the current
  * block.

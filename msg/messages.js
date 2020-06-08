@@ -73,7 +73,7 @@ Blockly.Msg.TODAY = 'Today';
 // Context menus.
 /** @type {string} */
 /// context menu - Make a copy of the selected block (and any blocks it contains).\n{{Identical|Duplicate}}
-Blockly.Msg.DUPLICATE_BLOCK = 'Duplicate';
+Blockly.Msg.DUPLICATE_BLOCK = 'Duplic';
 /** @type {string} */
 /// context menu - Add a descriptive comment to the selected block.
 Blockly.Msg.ADD_COMMENT = 'Add Comment';

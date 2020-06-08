@@ -1,0 +1,302 @@
+
+h1 {
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    /*font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;*/
+font-size: 50px;
+position: relative;
+left:509px;
+top:-2000px;
+text-shadow: 4px 4px palevioletred;
+
+}
+p1 {
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    font-size: 30px;
+    position:relative;
+    left: 1129px;
+    top:-2044px;
+}
+p2 {
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    font-size: 30px;
+    position:relative;
+    left: 227px;
+    top:-1907px;
+}
+/*#mytextarea{
+    font-family: "lucida sans unicode", "lucida grande", sans-serif;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-size:20px;
+    position:relative;
+    left: 1235px;
+    top:-2138px;
+    border-radius: 8px;
+        -webkit-appearance: textarea;
+    
+        border-top-width: 2px;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
+        border-left-width: 2px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-top-color: initial;
+        border-right-color: initial;
+        border-bottom-color: initial;
+        border-left-color: initial;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        -webkit-rtl-ordering: logical;
+        -webkit-user-select: text;
+        padding-top: 2px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        flex-direction: column;
+        resize: auto;
+        cursor: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background-color: gold;
+    
+
+}*/
+#mytextarea{
+    position:relative;
+    top:-27px;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-size:20px;
+    
+ height: 100px;
+  width: 115%;
+  /*position:relative;
+  left: 1297px;
+  top:-2032px;*/
+
+border-style: solid;
+border-radius: 8px;
+
+border-width: 2px 4px 4px 2px; /* 25px top, 10px right, 4px bottom and 35px left */
+
+background-color:lightcoral;
+border: 1px solid lightgrey;
+
+
+}
+#exportPreview{
+    
+position: relative;
+top:-2071px;
+left:1376px;
+height:100%;
+width:20%;
+background-color:white;
+
+
+}
+h5{
+    position:relative;
+    top:10px;
+    left:15px;
+    font-size:x-large;
+}
+.exportPreviewTextArea {
+    display: block;
+    float: right;
+    height: 40%;
+    width: 100%;
+    
+  }
+  #bt6{
+    border-color: darkgrey;
+    font-size: large;
+     position: relative;
+     left:1500px;
+     top:-2119px;
+
+  }
+
+
+#dict{
+    display:none;
+    /*font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-size:20px;
+    
+    height: 300px;
+  width: 25%;
+  
+  border-style: solid;
+  border-radius: 8px;
+
+  border-width: 2px 4px 4px 2px; 
+  position:relative;
+  left: 1297px;
+  top:-2000px;
+
+    background-color: #b3ffad;
+    overflow:scroll;
+    */
+
+
+    
+}
+#dict2{
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-size:20px;
+    
+    height: 300px;
+  width: 115%;
+  /*position:relative;
+  left: 1297px;
+  top:-2000px;*/
+  position:relative;
+    top:-120px;
+    overflow:scroll;
+
+border-style: solid;
+border-radius: 8px;
+
+border-width: 2px 4px 4px 2px; /* 25px top, 10px right, 4px bottom and 35px left */
+
+background-color:lightcoral;
+border: 1px solid lightgrey;
+
+
+
+
+
+
+}
+#dict3{
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-size:20px;
+    
+    height: 200px;
+  width: 115%;
+  position:relative;
+    top:-244px;
+  
+    overflow:scroll;
+
+border-style: solid;
+border-radius: 8px;
+
+border-width: 2px 4px 4px 2px; /* 25px top, 10px right, 4px bottom and 35px left */
+background-color:lightcoral;
+border: 1px solid lightgrey;
+
+
+
+
+}
+
+#bt5{
+    position: relative;
+    top:-277px;
+    /*left:626px;*/
+    border-color: darkgrey;
+    font-size: large;
+}
+#btn{
+    position: relative;
+    top:-60px;
+    font-size: larger;
+    border-color: darkgrey;
+    font-size: large;
+}
+#btn1{
+    border-color: darkgrey;
+    font-size: large;
+    position: relative;
+    top:-60px;
+
+}
+#bt{
+    border-color: darkgrey;
+    font-size: large;
+    position: relative;
+    top:-60px;
+
+
+
+}
+#bt1{
+
+    border-color: darkgrey;
+    font-size: large;
+
+}
+#show{
+
+    border-color: darkgrey;
+    font-size: large;
+
+}
+#restorer{
+    font-size: 63px;
+    border-color: darkgrey;
+    font-size: large;
+
+}
+#btn2{
+    border-color: darkgrey;
+    font-size: large;
+    position: relative;
+    top:-174px;
+
+}
+#btn3{
+    border-color: darkgrey;
+    font-size: large;
+   position: relative;
+    top:-174px;
+
+
+}
+#p12{
+    font-size:20px;
+    position:relative;
+    left: 558px;
+    top:-1849px;
+    width: 600px;
+    border-radius: 8px;
+    border-top-width: 2px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 2px;
+    background-color: #b3ffad;
+
+}
+#colors{
+    position: relative;
+    top:-60px;
+
+
+
+}
+a{
+    position:relative;
+    top:-3070px;
+    left:1595px;
+
+
+}
+#first{
+    position: relative;
+    left:38px;
+}
+#second{
+    position: relative;
+    top:-80px;
+    left:43px;
+}
+#third{
+    position: relative;
+    top:-202px;
+    left:71px;
+    
+}

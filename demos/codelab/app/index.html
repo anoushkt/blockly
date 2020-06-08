@@ -40,12 +40,35 @@
         <div class="button mdl-color--green-500">9</div>
       </div>
     </div>
-
+    
     <div class="blockly-editor">
       <div id="blockly-div" style="height: 480px; width: 400px;"></div>
+      <xml id="toolbox" style="display: none">
+        <category name="Loops" colour="120">
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <shadow type="math_number">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+          </block>
+        </category>
+      </xml>
+      <xml>
+        <category name="Loops" colour="120">
+          ...
+        </category>
+        <category name="Sounds" colour="170">
+          <block type="play_sound"></block>
+        </category>
+      </xml>
     </div>
   </main>
-
+  <script src="scripts/sound_blocks.js"></script>
+  <script src="../../../blockly_compressed.js"></script>
+  <script src="../../../blocks_compressed.js"></script>
+  <script src="../../../msg/js/en.js"></script>
+  
   <script src="scripts/music_maker.js"></script>
   <script src="scripts/main.js"></script>
 

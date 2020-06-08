@@ -46,5 +46,12 @@
   document.querySelector('#save').addEventListener('click', handleSave);
 
   enableMakerMode();
+  Blockly.inject('blockly-div', {
+    media: '../../../media/',
+    toolbox: document.getElementById('toolbox'),
+    toolboxPosition: 'end',
+    horizontalLayout: true,
+    scrollbars: false
+  });
 
 })();

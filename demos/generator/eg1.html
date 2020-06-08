@@ -1,0 +1,33 @@
+<div>
+<p>The quick brown fox jumps over the lazy dog</p>
+</div>
+<br />
+<input id="changeColor" type="button" value="Select text and Change Style" />
+<script>
+function selectHTML() {
+    try {
+        if (window.ActiveXObject) {
+            var c = document.selection.createRange();
+            return c.htmlText;
+        }
+    
+        var nNd = document.createElement("span");
+        var w = getSelection().getRangeAt(0);
+        w.surroundContents(nNd);
+        return nNd.innerHTML;
+    } catch (e) {
+        if (window.ActiveXObject) {
+            return document.selection.createRange();
+        } else {
+            return getSelection();
+        }
+    }
+}
+
+$(function() {
+    $('#changeColor').click( function() {
+        var mytext = selectHTML();
+        $('span').css({"background":"yellow","font-weight":"bold"});
+    });
+});
+</script>

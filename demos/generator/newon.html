@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     </head>
+<input type="button" onclick="surroundSelection()" value="Surround">
+<div contenteditable="true" id="p1" style="width: 500px;">One two three four</div>
+<input type="text" id="test" value="Some text"  style="width: 500px;">
+<input type="button" onclick="put()" value="out">
+<input name="Color Picker" id="here" type="color"/>
+<br>
+<br>
+<br>
+<div class="demo-container">
+    <div class="demo-box">Demonstration Box</div>
+    <ul>
+      <li>list item 1</li>
+      <li>list <strong>item</strong> 2</li>
+    </ul>
+  </div>
+<div class="boxed" id="ok">
+
+    This text is enclosed in a box.
+  </div>
+  <style>.boxed {
+    border: 1px solid green ;
+    width:500px;
+    overflow:scroll;
+
+  }</style>
+  
+<script>
+function surroundSelection() {
+    //window.alert(document.getElementById("here").value)
+    
+    var span = document.createElement("span");
+    span.style.fontWeight = "bold";
+    span.style.color = document.getElementById("here").value;
+
+    if (window.getSelection) {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var range = sel.getRangeAt(0).cloneRange();
+            range.surroundContents(span);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+    }
+   window.alert( document.getElementById("p1").value)
+    //document.getElementById("ok").innerHTML= document.getElementById("p1").innerHTML ;
+    document.getElementById("ok").innerHTML= document.getElementById("p1").innerHTML ;
+   localStorage.setItem("ok",document.getElementById("ok").innerHTML);
+   document.getElementById("ok").value =$("div.boxed").text();
+   document.getElementById("test").value=$("div.boxed").text();
+
+}
+function put(){
+     document.getElementById("test").value=$( "div.boxed" ).text()
+
+    document.getElementById("p1").innerHTML =  document.getElementById("test").value;
+    
+
+}
+</script>
+</html>

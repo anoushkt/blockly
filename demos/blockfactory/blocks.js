@@ -312,7 +312,8 @@ Blockly.Blocks['field_angle'] = {
     this.setColour(160);
     this.appendDummyInput()
         .appendField('angle input')
-        .appendField(new Blockly.FieldAngle('90'), 'ANGLE')
+        .appendField(new Blockly.FieldNumber(0), "ANGLE");
+        //.appendField(new Blockly.FieldAngle('90'), 'ANGLE')
         .appendField(',')
         .appendField(new Blockly.FieldTextInput('NAME'), 'FIELDNAME');
     this.setPreviousStatement(true, 'Field');

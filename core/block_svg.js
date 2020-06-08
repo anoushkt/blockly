@@ -724,7 +724,8 @@ Blockly.BlockSvg.prototype.generateContextMenu = function() {
     if (this.isDeletable() && this.isMovable()) {
       menuOptions.push(Blockly.ContextMenu.blockDuplicateOption(block));
     }
-
+    menuOptions.push(Blockly.ContextMenu.blockDOption(block));
+    
     if (this.workspace.options.comments && !this.collapsed_ &&
         this.isEditable()) {
       menuOptions.push(Blockly.ContextMenu.blockCommentOption(block));

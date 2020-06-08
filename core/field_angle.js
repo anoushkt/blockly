@@ -537,7 +537,7 @@ Blockly.Css.register([
 
   '.blocklyAngleLine {',
     'stroke: #f00;',
-    'stroke-width: 2;',
+    'stroke-width: 5;',
     'stroke-linecap: round;',
     'pointer-events: none;',
   '}'
